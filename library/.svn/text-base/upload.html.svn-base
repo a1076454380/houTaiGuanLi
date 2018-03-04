@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>上传共享文件</title>
+		<link rel="stylesheet" type="text/css" href="../css/BeatPicker.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.right-main{height: auto!important;}
+		.right-text{line-height: 25px;}
+		.right-title{line-height: 25px;}
+		.upload .right-bottom{height: calc(100% - 325px);}
+		.upload .right-bottom{overflow: hidden;}
+		.upload .rt-main{height: calc(100% - 30px);}
+		.upload .myimg{width:60px!important;height: 70px;}
+		.near-main{overflow: hidden!important;}
+		.rt-main{overflow-y: scroll;}
+		.library-wrap .file-click{background: url(../img/add.png) no-repeat;text-indent: 40px;font-size: 12px;background-size:12px;background-position-y: 7px;}
+		.info{width: 350px;}
+		.right-text{width: 200px;}
+		.right-main{padding: 0 30px;}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword editor">
+						<div class="near upload">
+							<div class="title">
+								<span>上传共享文件</span>
+								<a class="dbtn" href="">返回文档目录</a>
+							</div>
+							<div class="near-main">
+								<form action="">
+									<img src="../img/upload.png" style="margin-top: 10px;"/>
+									<div class="upload-group">
+										<div class="upload-text">
+											本地
+										</div>
+										<div class="upload-input">
+											
+										</div>
+										<div id="file" class="dbtn">
+											Browse
+										</div>
+										<input type="file" name="myfile" id="myfile" value="" />
+									</div>
+									<div class="upload-group">
+										<div class="upload-text">
+											共享至
+										</div>
+										<div class="upload-input">
+											<input type="text" name="" id="" value="" />
+										</div>
+									</div>
+									<div class="upload-group" style="margin-top: 40px;">
+										<div class="upload-text">
+											编辑说明
+										</div>
+									</div>
+									<div class="select-group">
+										<div class="upload-text">
+											名称修改
+										</div>
+										<div class="upload-input">
+											<select name="">
+												<option value="0">有</option>
+												<option value="1">无</option>
+											</select>
+										</div>
+									</div>
+									<div class="select-group">
+										<div class="upload-text">
+											内容修改
+										</div>
+										<div class="upload-input">
+											<select name="">
+												<option value="0">有</option>
+												<option value="1">无</option>
+											</select>
+										</div>
+									</div>
+										<input type="submit" name="" id="" value="确定上传" class="dbtn"/>
+								</form>
+							</div>
+						</div>
+						<div class="info upload">
+							<div class="title">
+								文档说明
+							</div>
+							<div class="right-main">
+								<img src="../img/my_03.png" class="myimg"/>
+								<div class="right-group">
+									<div class="right-title">
+										文件名
+									</div>
+									<div class="right-text">
+										xxx项目报价
+									</div>
+								</div>
+								<div class="right-group">
+									<div class="right-title">
+										文件类型
+									</div>
+									<div class="right-text">
+										.doc
+									</div>
+								</div>
+								<div class="right-group">
+									<div class="right-title">
+										创建者
+									</div>
+									<div class="right-text">
+										张三
+									</div>
+								</div>
+								<div class="right-group">
+									<div class="right-title">
+										所在部门
+									</div>
+									<div class="right-text">
+										技术部
+									</div>
+								</div>
+								<div class="right-group">
+									<div class="right-title">
+										创建时间
+									</div>
+									<div class="right-text">
+										201.10.11
+									</div>
+								</div>
+								<div class="right-group">
+									<div class="right-title">
+										当前版本
+									</div>
+									<div class="right-text">
+										V2
+									</div>
+								</div>
+								</div>
+								<div class="right-bottom">
+									<div class="rt-title">
+										共享目录
+									</div>
+									<div class="rt-main">
+										<div class="rt-nav">
+											<span class="normal active">AAA部门</span>
+											<span class="normal">BBB部门</span>
+											<span class="normal">CCC部门</span>
+											<span class="normal">DDD部门</span>
+										</div>
+										<div class="rt-content">
+											<div class="library-wrap">
+												<div class="file-title">
+													<span class="file-click">
+														<img src="../img/file.png"/><span>XXX文件夹</span>
+														
+													</span>
+													<div class="file-wrap">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+															<div class="file-wrap">
+																<div class="file-title">
+																	<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+																	<div class="file-wrap">
+																		<div class="file-title">
+																			<span class="newfile"><img src="../img/default.png"/>XXX文件</span>
+																		</div>
+																		<div class="file-title">
+																			<span class="newfile"><img src="../img/default.png"/>XXX文件</span>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							
+						</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#file').click(function(){
+				var that=this
+				$('#myfile').click()
+				$('#myfile').change(function(){
+					$(that).prev().html($(this).val())
+				})
+			})
+			$('select').change(function(){
+				$(this).css('background','rgb(230,230,230)')
+				$('#title').css('background','rgb(230,230,230)')
+			})
+			$('.file-click').click(function(event){
+				if($(this).next().attr('class')=='file-wrap'){
+					$(this).next().addClass('block')
+					$(this).css({'background':' url(../img/remove.png) no-repeat','background-size':'12px','background-position-y':'9px','background-position-x': '5px;'})
+				}else if($(this).next().attr('class')!=undefined){
+					$(this).next().removeClass('block')
+					$(this).css({'background':' url(../img/add.png) no-repeat','background-size':'12px','background-position-y':'2px','background-position-x': '5px;'})
+				}
+			})
+			$('.file-click').each(function(){
+				if($(this).next().attr('class')==undefined){
+					$(this).css({'background':' url(../img/remove.png) no-repeat','background-size':'12px','background-position-y':'9px','background-position-x': '5px;'})
+				}
+			})
+//			共享目录点击事件
+			$('.normal').click(function(){
+				$(this).siblings().removeClass('active')
+				$(this).addClass('active')
+			})
+		})
+	</script>
+</html>

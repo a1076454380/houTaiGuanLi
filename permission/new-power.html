@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>权限设定</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/proTree.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+		<style type="text/css">
+		.main-inner{overflow-y: hidden!important;}
+		.newmain{overflow-y: hidden!important;}
+		.scroll{overflow-y: scroll;height: calc(100% - 30px);}
+	</style>
+	<body>
+		<div class="wrap">
+			<!--遮蒙罩-->
+			<div class="rgba rhide">
+				<div class="alert-main">
+					<img src="../img/success.png"/>
+					<span>已发送至系统管理员审核</span>
+				</div>
+			</div>
+			<!--没有权限遮蒙罩-->
+			<div class="rgba">
+				<div class="alert-main">
+					<img src="../img/error_03.png" style="width: 150px;height: 150px;"/>
+					<span>您尚未有权限设定内容</span>
+				</div>
+			</div>
+			<!--头部-->
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<!--主体部分-->
+			<div class="content">
+				<!--主题左侧导航-->
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--右侧主体部分-->
+				<div class="main myword mypower">
+					<!--右侧主体顶部标题-->
+					<div class="operation">
+						<div class="title">
+							我的权限
+						</div>
+						<div class="word-wrap">
+							<div class="word-main">
+								<img src="../img/power.png" class="search-img" />
+								<div class="navbar powernav">
+									<a href="index.html">个人权限</a>
+								</div>
+								<div class="navbar powernav">
+									<a href="change-power.html">权限更改</a>
+								</div>
+								<div class="navbar powernav">
+									<a href="state.html">申请状态</a>
+								</div>
+								<div class="navbar powernav poweractive">
+									<a href="new-power.html">权限设定</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--主体部分-->
+					<div class="power-main">
+						<div class="main-top">
+							<div class="power-scope" style="width: 100%;border-top-right-radius: 10px;">
+								新增权限
+							</div>
+						</div>
+						<div class="main changemain newmain">
+							<div class="new-object">
+								<div class="new-top">
+									权限设定对象
+								</div>
+								<div class="new-main">
+									<div class="new-group">
+										<span>张三</span>
+										<span>AAA部门</span>
+									</div>
+									<div class="new-group">
+										<span>李四</span>
+										<span>AAA部门</span>
+									</div>
+									<div class="new-group">
+										<span>王五</span>
+										<span>AAA部门</span>
+									</div>
+								</div>
+								<div class="new-top" style="margin-top: 10px;">
+									新增授权对象
+								</div>
+								<div class="new-main">
+									<div class="new-group">
+										<span>张三</span>
+										<span>AAA部门</span>
+									</div>
+									<div class="new-group">
+										<span>李四</span>
+										<span>AAA部门</span>
+									</div>
+									<div class="new-group">
+										<span>王五</span>
+										<span>AAA部门</span>
+									</div>
+									<div class="other new-group" >
+										其他...
+									</div>
+									<div class="other-group">
+										<div class="new-group">
+											<span>张三</span>
+											<span>AAA部门</span>
+										</div>
+										<div class="new-group">
+											<span>李四</span>
+											<span>AAA部门</span>
+										</div>
+										<div class="new-group">
+											<span>王五</span>
+											<span>AAA部门</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="main-inner">
+								<div class="new-top" style="background: #F2F2F2;border-radius: 0;">
+									<div class="new-top">
+										对象权限范围
+									</div>
+								</div>
+								<div class="scroll">
+								<!--每一个部门是一个group-->
+								<div class="main-group">
+									<div class="main-left">
+										<div class="left-title">
+											<img src="../img/bumen.png" /> AAA部门
+										</div>
+										<div class="left-file">
+											<ul>
+												<li>
+													<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+												</li>
+												<ul>
+													<li>
+														<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+													</li>
+													<li>
+														<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+													</li>
+												</ul>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="main-group">
+									<div class="main-left">
+										<div class="left-title">
+											<img src="../img/bumen.png" /> 仓库储存部
+										</div>
+										<div class="left-file">
+											<ul>
+												<li>
+													<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+												</li>
+												<ul>
+													<li>
+														<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+													</li>
+													<li>
+														<span>XX目录</span>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															删除
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state no"></div>
+															编辑
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															下载
+														</div>
+														<div class="group">
+															<div class="power-change dbtn">
+																更改
+															</div>
+															<div class="power-state"></div>
+															浏览
+														</div>
+													</li>
+												</ul>
+											</ul>
+										</div>
+									</div>
+								</div>
+								</div>
+							</div>
+						</div>
+						<div class="power-button">
+							<div class="dbtn" id="power-button">
+								权限确定
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('#power-button').click(function(){
+				$('.rgba').show()
+			})
+			$('.rgba').click(function(){
+				$('.rgba').hide()
+			})
+		//	新增权限其他显示
+			$('.newmain .other').click(function(){
+				if($('.newmain .other-group').css('display')=='none'){
+					$('.newmain .other-group').show()
+					$(this).css('color','#333')
+				}else{
+					$('.newmain .other-group').hide()
+					$(this).css('color','#d45e12')
+				}
+			})
+			//	权限更改
+			$('.mypower .power-change').click(function(){
+				
+				if($(this).next().attr('class')=='power-state no'){
+					$(this).next().attr('class','power-state no')
+				}else{
+					$(this).next().attr('class','power-state')
+				}
+			})
+//			权限设定对象点击效果
+			$('.new-group').click(function(){
+				$('.new-group').removeClass('active')
+				$(this).addClass('active')
+			})
+		})
+	</script>
+</html>

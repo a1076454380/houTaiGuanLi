@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>删除用户</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.suboperation{margin-top: -10px;display: none;}
+		.hovershow:hover .suboperation{display: block;}
+		.newuser .main-inner{height: calc(100% - 55px)!important;}
+	</style>
+	<body>
+		<div class="wrap">
+			<!--遮蒙罩-->
+			<div class="rgba">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png"/>
+						<span>确定要删除用户名为XXX的用户吗</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							确定
+						</button>
+						<button class="dbtn rhide" id="reset">
+							取消
+						</button>
+					</div>
+				</div>
+				
+			</div>
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								<a href="../word-my/index.html">我的文档</a>
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								<a href="../word-power/index.html">我的权限</a>
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								<a href="index.html">系统服务</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword mypower">
+					<div class="operation">
+						<div class="title">
+							系统服务
+						</div>
+						<div class="word-wrap">
+							<div class="word-main">
+								<img src="../img/service.png" class="search-img" style="margin-top: 15px;"/>
+							</div>
+							<div class="service-main">
+								<div class="service-subtitle active">
+									<a href="user.html">用户管理</a>
+								</div>
+								<div class="operation" style="margin-top: 10px;">
+									<div class="operation-item">
+										<a href="" id="new">
+											<img src="../img/operation_03.png"/>
+											添加新用户
+										</a>
+									</div>
+									<div class="operation-item">
+										<a href="">
+											<img src="../img/operation_05-active.png"/>
+											删除用户
+										</a>
+									</div>
+								</div>
+								<div class="hovershow">
+									<div class="service-title">
+										<a href="">权限管理</a>
+									</div>
+									<div class="suboperation">
+										<a href="">现有权限</a>
+										<a href="">权限审核</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="power-main service-user">
+						<div class="main-top">
+							<div class="service-now">
+								现有用户
+							</div>
+							<div class="user-info">
+								用户信息
+							</div>
+						</div>
+						<div class="main newuser">
+							<div class="main-now">
+								<div class="main-title">
+									<div class="main-item">
+										部门
+									</div>
+									<div class="dash"></div>
+									<div class="main-item">
+										部门经理
+									</div>
+									<div class="dash"></div>
+									<div class="main-item">
+										部门成员
+									</div>
+								</div>
+								<div class="main-inner">
+									<div class="main-group">
+										<div class="main-item">
+												<img src="../img/bumen.png"/>
+												<div>
+													<p>
+														AAA部门
+													</p>
+												</div>
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item">
+											<img src="../img/manager_03.png"/>
+											<div>
+												<p class="active">
+													王五
+												</p>
+											</div>
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item">
+											<img src="../img/manager_06.png"/>
+											<div>
+												<p class="active">
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="main-group">
+										<div class="main-item">
+												<img src="../img/bumen.png"/>
+												<div>
+													<p>
+														AAA部门
+													</p>
+												</div>
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item">
+											<img src="../img/manager_03.png"/>
+											<div>
+												<p>
+													王五
+												</p>
+											</div>	
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item">
+											<img src="../img/manager_06.png"/>
+											<div>
+												<p >
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+												<p>
+													张三
+												</p>
+												<p>
+													李四
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info">
+								<div class="right-main">
+									<form action="">
+									<img src="../img/user.png"/>
+									<div class="right-group">
+										<div class="right-title">
+											姓名
+										</div>
+										<div class="right-text">
+											李四
+										</div>
+									</div>
+									<div class="right-group">
+										<div class="right-title">
+											所属部门
+										</div>
+										<div class="right-text">
+											AAA部门
+										</div>
+									</div>
+									<div class="right-group right-top">
+										<div class="right-title">
+											联系电话
+										</div>
+										<div class="right-text">
+											171615456
+										</div>
+									</div>
+									<div class="right-group">
+										<div class="right-title">
+											Email
+										</div>
+										<div class="right-text">
+											1461651@163.com
+										</div>
+									</div>
+									<div class="right-group">
+										<div class="right-title">
+											权限管理上级
+										</div>
+										<div class="right-text">
+											张三
+										</div>
+									</div>
+									<div class="right-group right-top">
+										<div class="right-title">
+											用户名
+										</div>
+										<div class="right-text">
+											XXXXX
+										</div>
+									</div>
+									<div class="right-group">
+										<div class="right-title">
+											密码
+										</div>
+										<div class="right-text">
+											XXXXX
+										</div>
+									</div>
+									<div class="right-group">
+										<div class="newsubmit dbtn"/>
+											删除此用户
+										</div>
+									</div>
+									</form>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+//			部门人员点击选中效果
+			$('.main-group p').click(function(){
+				$('.main-group p').removeClass('active')
+				$(this).addClass('active')
+				$(this).parent().parent().prev().prev().children('div').children('p').addClass('active')
+			})
+			$('.newsubmit').click(function(){
+				$('.rgba').show()
+			})
+			$('#submit').click(function(){
+				$('.rgba').hide()
+			})
+			$('#reset').click(function(){
+				$('.rgba').hide()
+			})
+		})
+	</script>
+</html>

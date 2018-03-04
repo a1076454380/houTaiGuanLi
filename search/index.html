@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>搜索结果</title>
+		<link rel="stylesheet" type="text/css" href="../css/BeatPicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" media="screen"/>
+		<link rel="stylesheet" type="text/css" href="../css/base.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/BeatPicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>	
+	</head>
+	<style type="text/css">
+		.right-main{overflow: hidden;}
+		@media all and (min-width: 100px) and (max-width: 768px){.mbtn{bottom: 90px;left: 0;}}
+	</style>
+	<body>
+		<div class="copy">
+			@版权所有
+		</div>
+		<div class="mbtn">
+			<span class="mbtn-inner">
+				<img src="../img/up.png"/>
+			</span>
+			<span class="mbtn-text">
+				文档说明
+			</span>
+		</div>
+		<div class="sbtn">
+			<span class="mbtn-inner">
+				<img src="../img/ssuo.png"/>
+			</span>
+			<span class="mbtn-text">
+				搜索条件
+			</span>
+		</div>
+		<div class="wrap">
+			<!--遮蒙层-->
+			<div class="rgba wjdelete">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png"/>
+						<span>您确定删除文件XXX吗?</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							是
+						</button>
+						<button class="dbtn rhide" id="submit">
+							否
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="rgba down">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png"/>
+						<span>您确定下载文件XXX吗?</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							是
+						</button>
+						<button class="dbtn rhide" id="submit">
+							否
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword mysearch">
+					<div class="operation">
+						<div class="title">
+							搜索条件
+						</div>
+						<div class="word-wrap search">
+							<form action="">
+								<div class="word-main">
+									<img src="../img/my_06.png" class="search-img" />
+									<div class="info-group">
+										<div class="info-name">
+											名称
+										</div>
+										<div class="info-text">
+											<input type="text" name="" id="" value="" />
+										</div>
+									</div>
+									<div class="info-group">
+										<div class="info-name">
+											部门
+										</div>
+										<div class="info-text">
+											<select name="">
+												<option value="">AAA部门</option>
+												<option value="">BBB部门</option>
+											</select>
+										</div>
+									</div>
+									<div class="info-group">
+										<div class="info-name">
+											创建人
+										</div>
+										<div class="info-text">
+											<input type="text" name="" id="" value="" />
+										</div>
+									</div>
+									<div class="info-group">
+										<div class="info-name">
+											类型
+										</div>
+										<div class="info-text">
+											<select name="">
+												<option value="">AA</option>
+												<option value="">BBB</option>
+											</select>
+										</div>
+									</div>
+									<p class="search-p">创建时间</p>
+									<div class="input-group right-group">
+										从<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" />
+									</div>
+									<div class="input-group right-group">
+										至<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" />
+									</div>
+									<p class="search-p">修改时间</p>
+									<div class="input-group right-group">
+										从<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" />
+									</div>
+									<div class="input-group right-group">
+										至<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" />
+									</div>
+										<input type="submit" name="" id="" value="搜索" />
+							</form>
+							</div>
+						</div>
+
+					</div>
+					<div class="near search demo" id="paginationdemo">
+						<div class="title">
+							搜索结果
+						</div>
+						<div class="near-main pagedemo _current" id="p1" style="">
+							<div class="near-group">
+								<div class="near-name">
+									1号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="newfile double"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="near-group">
+								<div class="near-name">
+									1号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="newfile double"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="near-main pagedemo" id="p2" style="display:none;">
+							<div class="near-group">
+								<div class="near-name">
+									2号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="near-group">
+								<div class="near-name">
+									2号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="near-main pagedemo" id="p3" style="display:none;">
+							<div class="near-group">
+								<div class="near-name">
+									3号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="near-group">
+								<div class="near-name">
+									3号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="near-main pagedemo" id="p4" style="display:none;">
+							<div class="near-group">
+								<div class="near-name">
+									4号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="near-group">
+								<div class="near-name">
+									4号部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="file-click"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="near-bottom" id="demo5"></div>
+					</div>
+					<div class="info search">
+						<div class="title">
+							文档说明
+						</div>
+						<div class="right-main">
+							<img src="../img/my_03.png" />
+							<div class="right-group">
+								<div class="right-title">
+									文件名
+								</div>
+								<div class="right-text">
+									xxx项目报价
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									文件类型
+								</div>
+								<div class="right-text">
+									.doc
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建者
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建时间
+								</div>
+								<div class="right-text">
+									201.10.11
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									当前版本
+								</div>
+								<div class="right-text">
+									V2
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									修订人
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									当前状态
+								</div>
+								<div class="right-text">
+									正常
+								</div>
+							</div>
+							
+						</div>
+						<div class="near-bottom">
+							<div class="b-itm">
+								<a href="../library/read.html">
+									<img src="../img/black_03.png"/>
+									浏览
+								</a>
+							</div>
+							<div class="b-itm">
+								<a href="javascript:void(0)" class="downn">
+									<img src="../img/black_05.png"/>
+									下载
+								</a>
+							</div>
+							<div class="b-itm">
+								<a href="../library/editor.html">
+									<img src="../img/black_07.png"/>
+									编辑
+								</a>
+							</div>
+							<div class="b-itm">
+								<a href="javascript:void(0)" class="delete">
+									<img src="../img/black_09.png"/>
+									删除
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script src="../js/jquery.paginate.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('.file-click').click(function(event) {
+				if($(this).next().attr('class') == 'file-wrap') {
+					$(this).next().addClass('block')
+				} else if($(this).next().attr('class') != undefined) {
+					$(this).next().removeClass('block')
+				}
+			})
+//			遮蒙层
+			$('.delete').click(function(){
+				$('.wjdelete').show()
+			})
+			
+			$('.downn').click(function(){
+				$('.down').show()
+			})
+			$('.num').click(function(){
+				$(this).siblings().removeClass('active01')
+				$(this).addClass('active01')
+			})
+            $("#demo5").paginate({
+                count: 4,
+                start: 1,
+                display: 7,
+                border: false,
+                border_color: '#fff',
+                text_color: 'white',
+                background_color: '#FFB264',
+                border_hover_color: '#ccc',
+                text_hover_color: '#FFB264',
+                background_hover_color: '#fff',
+                images: false,
+                mouse: 'press',
+                onChange: function (pageNum) {
+                    console.log(pageNum);
+                    $('._current', '#paginationdemo').removeClass('_current').hide();
+                    $('#p' + pageNum).addClass('_current').show();
+                }
+            });
+            $('.jPag-first').html('首页')
+            $('.jPag-last').html('末页')
+		})
+	</script>
+
+</html>

@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="Cache-Control" content="no-transform" /> 
+		<meta http-equiv="Cache-Control" content="no-siteapp" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>文档目录</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.library-wrap {height: calc(100% - 120px);margin-top: 15px;background: url(../img/backfile.png) no-repeat;background-position-x: right;background-size: 300px;overflow-y: scroll;}
+		.library-inner {margin-right: 150px;}
+		.file-click,.newfile {display: flex!important;justify-content: space-between;}
+		.file-click span,.newfile span {flex: 1;text-indent: 0!important;}
+		.file-click .fimg,.newfile .fimg {margin-left: 40px;margin-top: 3px;}
+		.right-main img {width: 60px;}
+		.right-main {overflow-y: hidden;}
+		.right-group {margin-top: 8px;}
+		.myword .search-img {width: 60px;}
+	</style>
+	<body>
+		<div class="copy">
+			@版权所有
+		</div>
+		<div class="mbtn">
+			<span class="mbtn-inner">
+				<img src="../img/up.png"/>
+			</span>
+			<span class="mbtn-text">
+				文档说明
+			</span>
+		</div>
+		<div class="wrap">
+			<!--遮蒙罩-->
+			<div class="rgba deletergb">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png" />
+						<span>此文件夹中尚有文件存在,不能删除!!</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							返回继续
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="rgba successrgb">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png" />
+						<span>您确定删除文件夹XXX吗?</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							是
+						</button>
+						<button class="dbtn rhide" id="submit">
+							否
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="rgba wjdelete">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png" />
+						<span>您确定删除文件XXX吗?</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							是
+						</button>
+						<button class="dbtn rhide" id="submit">
+							否
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="rgba wjdeleteerr">
+				<div class="alert-main deletalert">
+					<div class="alert-title">
+						<img src="../img/error_03.png" />
+						<span style="font-size: 30px;">
+							此文档被锁定,<br />
+							正在被用户名为XXX的用户进行编辑
+						</span>
+					</div>
+					<div class="alert-operation">
+						<button class="dbtn rhide" id="submit">
+							返回继续
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword library">
+					<div class="operation">
+						<div class="title">
+							公司部门
+						</div>
+						<div class="word-wrap">
+							<div class="word-main">
+								<img src="../img/library.png" class="search-img" style="height: auto;" />
+								<div class="navbar powernav">
+									<a href="javascript:void(0)">AAA部门</a>
+								</div>
+								<div class="navbar powernav poweractive">
+									<a href="l">BBB部门</a>
+								</div>
+								<div class="navbar powernav">
+									<a href="javascript:void(0)">CCC部门</a>
+								</div>
+								<div class="navbar powernav">
+									<a href="javascript:void(0)">DDD部门</a>
+								</div>
+								<div class="navbar powernav">
+									<a href="javascript:void(0)">DDD部门</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="near">
+						<div class="title">
+							文档目录
+						</div>
+						<div class="near-main" style="overflow-y: hidden!important;">
+							<div class="library-wrap">
+								<div class="library-inner">
+									<div class="file-title">
+										<span class="file-click">
+											<span class="show-hide">
+												<img src="../img/file.png" class="fimg"/>
+												<span>XXX文件夹</span>
+											</span>
+										<div class="click-group">
+											<a href="javascript:void(0)" class="tjia"><img src="../img/tjia.png" /></a>
+											<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+											<a href="javascript:void(0)" class="filedelet"><img src="../img/delete.png" /></a>
+										</div>
+										</span>
+									</div>
+									<div class="file-title">
+										<span class="file-click">
+											<span class="show-hide">
+												<img src="../img/file.png" class="fimg"/>
+												<span>XXX文件夹</span>
+											</span>
+											<div class="click-group">
+												<a href="javascript:void(0)" class="tjia"><img src="../img/tjia.png" /></a>
+												<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+												<a href="javascript:void(0)" class="filedelet"><img src="../img/delete.png" /></a>
+											</div>
+										</span>
+										<div class="file-wrap">
+											<div class="file-title">
+												<span class="file-click">
+														<span class="show-hide">
+															<img src="../img/file.png" class="fimg"/>
+															<span>XXX文件夹</span>
+														</span>
+													<div class="click-group">
+														<a href="javascript:void(0)" class="tjia"><img src="../img/tjia.png" /></a>
+														<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+														<a href="javascript:void(0)" class="filedelet"><img src="../img/delete.png" /></a>
+													</div>
+												</span>
+												<div class="file-wrap">
+													<div class="file-title">
+														<span class="file-click">
+														<span class="show-hide">
+															<img src="../img/file.png" class="fimg"/>
+															<span>XXX文件夹</span>
+														</span>
+														<div class="click-group">
+															<a href="javascript:void(0)" class="tjia"><img src="../img/tjia.png" /></a>
+															<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+															<a href="javascript:void(0)" class="filedelet"><img src="../img/delete.png" /></a>
+														</div>
+														</span>
+														<div class="file-wrap">
+															<div class="file-title">
+																<span class="newfile">
+																	<span class="double">
+																		<img src="../img/default.png" class="fimg"/>
+																		<span>YYY项目报价</span>
+																	</span>
+																<div class="click-group">
+																	<a href="read.html"><img src="../img/search.png" /></a>
+																	<a href="javascript:void(0)"><img src="../img/download.png" /></a>
+																	<a href="javascript:void(0)" class="fileoper" data-state='0'><img src="../img/operation.png" /></a>
+																	<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+																	<a href="javascript:void(0)" class="wdelete" data-state='0'><img src="../img/delete.png" /></a>
+																</div>
+																</span>
+															</div>
+															<div class="file-title">
+																<span class="newfile">
+																	<span class="double">
+																		<img src="../img/default.png" class="fimg"/>
+																		<span>YYY项目报价</span>
+																	</span>
+																<div class="click-group">
+																	<a href="read.html"><img src="../img/search.png" /></a>
+																	<a href="javascript:void(0)"><img src="../img/download.png" /></a>
+																	<a href="javascript:void(0)" class="fileoper" data-state='1'><img src="../img/operation.png" /></a>
+																	<a href="javascript:void(0)" class="rname"><img src="../img/rname.png" /></a>
+																	<a href="javascript:void(0)" class="wdelete" data-state='1'><img src="../img/delete.png" /></a>
+																</div>
+																</span>
+															</div>
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="library-bottom">
+								<div class="liarary-item">
+									<div class="library-title">
+										目录
+									</div>
+									<div class="library-text">
+										<div class="library-group">
+											<img src="../img/tjia.png" />
+											<span>添加</span>
+										</div>
+										<div class="library-group">
+											<img src="../img/rname.png" />
+											<span>重命名</span>
+										</div>
+										<div class="library-group">
+											<img src="../img/delete.png" />
+											<span>删除</span>
+										</div>
+									</div>
+								</div>
+								<div class="liarary-item">
+									<div class="library-title">
+										文档
+									</div>
+									<div class="library-text">
+										<div class="library-group">
+											<img src="../img/search.png" />
+											<span>浏览</span>
+										</div>
+										<div class="library-group">
+											<img src="../img/download.png" />
+											<span>下载</span>
+										</div>
+										<div class="library-group">
+											<img src="../img/operation.png" />
+											<span>编辑</span>
+										</div>
+										<div class="library-group">
+											<img src="../img/delete.png" />
+											<span>删除</span>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title">
+							文档说明
+						</div>
+						<div class="right-main">
+							<img src="../img/my_03.png" />
+							<div class="right-group">
+								<div class="right-title">
+									文件名
+								</div>
+								<div class="right-text">
+									xxx项目报价
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									文件类型
+								</div>
+								<div class="right-text">
+									.doc
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建者
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建时间
+								</div>
+								<div class="right-text">
+									201.10.11
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									当前版本
+								</div>
+								<div class="right-text">
+									V2
+								</div>
+							</div>
+							<div class="right-group right-top">
+								<div class="right-title">
+									修订人
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group right-top">
+								<div class="right-title">
+									当前状态
+								</div>
+								<div class="right-text">
+									正常
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			//			文件树效果
+			$('.near-main').on('click','.show-hide',function(){
+				if($(this).parent().next().attr('class') == 'file-wrap') {
+					$(this).parent().siblings().addClass('block')
+					$(this).css({
+						'background': ' url(../img/remove.png) no-repeat',
+						'background-size': '15px',
+						'background-position-y': '9px'
+					})
+				} else if($(this).parent().next().attr('class') != undefined) {
+					$(this).parent().siblings().removeClass('block')
+					$(this).css({
+						'background': ' url(../img/add.png) no-repeat',
+						'background-size': '15px',
+						'background-position-y': '2px'
+					})
+				}
+			})
+			function addimg(){
+				$('.show-hide').each(function() {
+				if($(this).parent().next().attr('class') == undefined) {
+					$(this).css({
+						'background': ' url(../img/remove.png) no-repeat',
+						'background-size': '15px',
+						'background-position-y': '9px'
+					})
+				}
+			})
+			}
+			addimg()
+			//			删除文件夹事件
+			$('.near-main').on('click','.filedelet',function(){
+				if($(this).parent().parent().next().attr('class') == undefined) {
+					$('.successrgb').show()
+					event.stopPropagation()
+				} else {
+					$('.deletergb').show()
+					event.stopPropagation()
+				}
+			})
+			//			删除文件事件
+			$('.near-main').on('click','.wdelete',function(){
+				var state = $(this).attr('data-state')
+				if(state == '0') {
+
+					$('.wjdelete').show()
+					event.stopPropagation()
+				} else {
+					$('.wjdeleteerr').show()
+					event.stopPropagation()
+				}
+			})
+			//			文件编辑事件
+			$('.near-main').on('click','.fileoper',function(){
+				var state = $(this).attr('data-state')
+				if(state == '0') {
+					//					进入编辑页面
+				} else {
+					$('.wjdeleteerr').show()
+					event.stopPropagation()
+				}
+			})
+			//			文档重命名事件
+			
+			$('.near-main').on('click','.rname',function(){
+				$(this).parent().prev().children('span').html("<input type='text' id='newname' value='' placeholder='请输入文件夹名称'/>")
+				$('#newname').focus()
+				event.stopPropagation()
+			})
+			//			添加子代文件夹
+			var index = 0
+			$('.near-main').on('click','.tjia',function(){
+				$(this).parent().parent().parent().append(`
+					<div class="file-wrap block">
+						<div class="file-title">
+							<span class="file-click">
+								<span class="show-hide">
+									<img src="../img/file.png" class="fimg">
+									<span><input type='text' id='newname' value='' placeholder='请输入文件夹名称'/></span>
+								</span>
+								<div class="click-group">
+									<a href="javascript:void(0)" class="tjia"><img src="../img/tjia.png"></a>
+									<a href="javascript:void(0)" class="rname"><img src="../img/rname.png"></a>
+									<a href="javascript:void(0)" class="filedelet"><img src="../img/delete.png"></a>
+								</div>
+							</span>
+							<div class="file-wrap">
+														
+							</div>
+						</div>
+					</div>
+				`)
+				$('#newname').focus()
+				
+				addimg()
+				event.stopPropagation()
+			})
+			$('.library-wrap').on('blur','#newname',function(){
+				var val=$(this).val()
+				addimg()
+				if(val==''){
+					$(this).parent().html('新建文件夹')
+				}else{
+					$(this).parent().html(val)
+				}
+			})
+		})
+	</script>
+
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>我的文档</title>
+		<link rel="stylesheet" type="text/css" href="../css/BeatPicker.min.css" />
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/BeatPicker.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.right-main{height: calc(100% - 30px);overflow-y: hidden;}
+		.right-top{margin-top: 15px;}
+		@media all and (min-width: 100px) and (max-width: 768px){
+			.myword .operation{display: block!important;width: 100%;}
+			.myword{flex-direction: column;}
+			.myword .word-main{width: 100%;}
+			.myword form{display: flex;width: 100%;justify-content: center;}
+			.info-name,.word-wrap .title,.operation img,.operation .word-main:last-of-type .info-group,.operation p,.operation form:last-of-type{display: none;}
+			.myword form img,.word-wrap .word-main:last-of-type .info-group:first-of-type{display: block;}
+			.myword .word-main:last-of-type{height: 0;overflow: hidden;}
+		}
+	</style>
+	<body>
+		<div class="copy">
+			@版权所有
+		</div>
+		<div class="mbtn">
+			<span class="mbtn-inner">
+				<img src="../img/up.png"/>
+			</span>
+			<span class="mbtn-text">
+				文档说明
+			</span>
+		</div>
+		<div class="wrap">
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar active">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword">
+					<div class="operation">
+						<div class="title">
+							我的共享文档
+							<a href="userinfo.html" class="resinfo">个人信息</a>
+						</div>
+						<div class="word-wrap">
+							<div class="word-main">
+								<img src="../img/my_06.png" class="search-img" />
+								<p class="search-p">按操作时间搜索</p>
+								<form action="">
+									<div class="input-group">
+										从<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" />
+									</div>
+									<div class="input-group">
+										至<input type="text" name="" id="" value="" data-beatpicker="true" data-beatpicker-position="['*','*']" data-beatpicker-module="icon,clear" /><img src="../img/my_11.png" class="search-go" />
+									</div>
+								</form>
+								<form action="" method="post">
+									<div class="input-group" style="height: 80px;">
+										<input type="file" id="newfile"/>
+										<div class="file-click" id="newclick">上传新的共享文件...</div>
+									</div>
+								</form>
+							</div>
+							<div class="title" style="border-top-right-radius: 10px;">
+								用户个人信息
+							</div>
+							<div class="word-main">
+								<div class="info-group">
+									<div class="info-name">
+										用户名
+									</div>
+									<div class="info-text">
+										张三
+									</div>
+								</div>
+								<div class="info-group">
+									<div class="info-name">
+										部门
+									</div>
+									<div class="info-text">
+										技术部
+									</div>
+								</div>
+								<div class="info-group">
+									<div class="info-name">
+										类型
+									</div>
+									<div class="info-text">
+
+									</div>
+								</div>
+								<div class="more">
+									<a href="userinfo.html">更多个人信息...</a>
+								</div>
+							</div>
+						</div>
+
+					</div>
+					<div class="near">
+						<div class="title">
+							最近文档
+						</div>
+						<div class="near-main">
+							<div class="near-group">
+								<div class="near-name">
+									v部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="newfile double"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="near-state">
+									正在浏览
+								</div>
+							</div>
+							<div class="near-group">
+								<div class="near-name">
+									v部门
+								</div>
+								<div class="near-con innerUl">
+									<div class="library-wrap block">
+										<div class="file-title">
+											<span class="file-click"><img src="../img/file.png"/><span>XXX文件夹</span></span>
+											<div class="file-wrap block">
+												<div class="file-title">
+													<span class="file-click"><img src="../img/file.png"/>XXX文件夹</span>
+													<div class="file-wrap block">
+														<div class="file-title">
+															<span class="newfile double"><img src="../img/default.png"/>XXX文件</span>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="near-state error">
+									未编辑上传
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="info">
+						<div class="title">
+							文档说明
+						</div>
+						<div class="right-main">
+							<img src="../img/my_03.png" />
+							<div class="right-group">
+								<div class="right-title">
+									文件名
+								</div>
+								<div class="right-text">
+									xxx项目报价
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									文件类型
+								</div>
+								<div class="right-text">
+									.doc
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建者
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									创建时间
+								</div>
+								<div class="right-text">
+									201.10.11
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									当前版本
+								</div>
+								<div class="right-text">
+									V2
+								</div>
+							</div>
+							<div class="right-group right-top">
+								<div class="right-title">
+									修订人
+								</div>
+								<div class="right-text">
+									张三
+								</div>
+							</div>
+							<div class="right-group">
+								<div class="right-title">
+									所在部门
+								</div>
+								<div class="right-text">
+									技术部
+								</div>
+							</div>
+							<div class="right-group right-top">
+								<div class="right-title">
+									当前状态
+								</div>
+								<div class="right-text">
+									正常
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+			$('.file-click').click(function(event){
+				if($(this).next().attr('class')=='file-wrap'){
+					$(this).next().addClass('block')
+				}else if($(this).next().attr('class')!=undefined){
+					$(this).next().removeClass('block')
+				}
+			})
+			$('#newclick').click(function(){
+				$('#newfile').click()
+			})
+		})
+	</script>
+</html>

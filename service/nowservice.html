@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>现有权限</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		.mypower .power-main .main-inner{height: calc(100% - 55px)!important;}
+	</style>
+	<body>
+		<div class="wrap">
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar">
+								<a href="../word-my/index.html">我的文档</a>
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								<a href="../word-power/index.html">我的权限</a>
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar active">
+								<a href="index.html">系统服务</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main myword mypower">
+					<div class="operation">
+						<div class="title">
+							系统服务
+						</div>
+						<div class="word-wrap">
+							<div class="word-main">
+								<img src="../img/service.png" class="search-img" style="margin-top: 15px;"/>
+							</div>
+							<div class="service-main">
+								<div class="service-title">
+									<a href="user.html">用户管理</a>
+								</div>
+								<div class="operation">
+									<div class="operation-item">
+										<a href="" id="new">
+											<img src="../img/operation_03.png"/>
+											添加新用户
+										</a>
+									</div>
+									<div class="operation-item">
+										<a href="" id="delete">
+											<img src="../img/operation_05.png"/>
+											删除用户
+										</a>
+									</div>
+								</div>
+								<div class="service-subtitle">
+									权限管理
+								</div>
+								<div class="suboperation">
+									<a href="" class="active">现有权限</a>
+									<a href="">权限审核</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="power-main service-user">
+						<div class="main-top">
+							<div class="service-now">
+								现有权限
+							</div>
+							<div class="user-info">
+								权限添加
+							</div>
+						</div>
+						<div class="main newuser nowservice">
+							<div class="main-now">
+								<div class="main-title">
+									<div class="main-item">
+										部门
+									</div>
+									<div class="dash"></div>
+									<div class="main-item">
+										权限目录
+									</div>
+									<div class="dash"></div>
+									<div class="main-item">
+										权限主要负责人
+									</div>
+									<div class="operation"></div>
+								</div>
+								<div class="main-inner">
+									<div class="main-group">
+										<div class="main-item">
+												<img src="../img/bumen.png"/>
+												<div>
+													<p>
+														AAA部门
+													</p>
+												</div>
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item file-mulu">
+											<ul>
+												<li>
+													XX目录
+												</li>
+												<ul>
+													<li>
+														<span>XX目录</span>
+													</li>
+													<li>
+														<span>XX目录</span>
+													</li>
+												</ul>
+											</ul>
+										</div>
+										<div class="hr dash"></div>
+										<div class="main-item">
+											<img src="../img/manager_03.png"/>
+											<div>
+												<p>
+													张三
+												</p>
+											</div>
+										</div>
+										<div class="operation">
+											<a href=""><img src="../img/operation.png"/></a>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="info">
+								<div class="right-main" style="padding: 0 10px;">
+									<img src="../img/key_03.png"/>
+									<div class="service-right">
+										<div class="other" >
+											<div class="other-title">
+												其他部门经理
+											</div>
+											<div class="other-main" id="left">
+												<form action="">
+												<div class="other-item">
+														<span>
+															AAA部门
+														</span>
+														<span>
+															张三
+														</span>
+													</div>
+													<div class="other-item">
+														<span>
+															GGG部门
+														</span>
+														<span>
+															李四
+														</span>
+													</div>
+													<div class="other-item">
+														<span>
+															HHH部门
+														</span>
+														<span>
+															王五
+														</span>
+													</div>
+												</form>
+											</div>
+										</div>
+										<div class="operation">
+											<img src="../img/right.png" id="toright"/>
+											<img src="../img/left.png" id="toleft"/>
+										</div>
+										<div class="other">
+											<div class="other-title">
+												其他部门经理
+											</div>
+											<div class="other-main" id="right">
+												<div class="other-item">
+													<form action="">
+														<span>
+															BBB部门
+														</span>
+														<span>
+															赵六
+														</span>
+													</form>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="service-right service-h">
+										添加文档操作权限
+									</div>
+									<div class="service-right">
+										<div class="operation-goup acti">
+											<img src="../img/serviceok.png"/>
+											<span>浏览</span>
+										</div>
+										<div class="operation-goup acti">
+											<img src="../img/serviceok.png"/>
+											<span>下载</span>
+										</div>
+										<div class="operation-goup">
+											<img src="../img/serviceok.png"/>
+											<span>编辑</span>
+										</div>
+										<div class="operation-goup">
+											<img src="../img/serviceok.png"/>
+											<span>删除</span>
+										</div>
+									</div>
+									<button class="dbtn service-btn">
+										确定添加
+									</button>
+								</div>	
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function(){
+//			权限添加的点击效果
+				$('.other-item').click(function(){
+					$(this).addClass('active')
+				})
+//				点击箭头可将对应的选项添加到对应的框内
+				$('#toleft').click(function(){
+					$('#right .other-item').each(function(index,e){
+						if($(this).attr('class')=='other-item active'){
+							$('#left').append($(this))
+							$(this).removeClass('active')
+						}
+					})
+				})
+				$('#toright').click(function(){
+					$('#left .other-item').each(function(index,e){
+						if($(this).attr('class')=='other-item active'){
+							$('#right').append($(this))
+							$(this).removeClass('active')
+						}
+					})
+				})
+				$('.operation-goup').click(function(){
+					if($(this).attr('class')=='operation-goup'){
+						$(this).addClass('acti')
+					}else{
+						$(this).removeClass('acti')
+					}
+				})
+		})
+	</script>
+</html>

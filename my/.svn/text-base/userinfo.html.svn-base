@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>个人信息</title>
+		<link rel="stylesheet" type="text/css" href="../css/base.css" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/proTree.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div class="copy">
+			@版权所有
+		</div>
+		<div class="wrap">
+			<div class="top">
+				<div class="toptop-logo">
+					<img src="../img/logo.png" />
+				</div>
+				<div class="top-text">
+					文档共享管理系统
+				</div>
+			</div>
+			<div class="content">
+				<div class="nav">
+					<div class="nav-content">
+						<div class="nav-group">
+							<div class="navbar active">
+								我的文档
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档库
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								文档搜索
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								我的权限
+							</div>
+						</div>
+						<div class="nav-group">
+							<div class="navbar">
+								系统服务
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="main userinfo">
+					<div class="user-title">
+						个人信息
+					</div>
+					<div class="user-main">
+						<form action="">
+						<div class="img-box">
+							<img src="../img/avatar.png"/>
+						</div>
+						<div class="user-group">
+							<label for="name">姓名</label>
+							<input type="text" name="" id="name" value="" />
+						</div>
+						<div class="user-group">
+							<label for="name">所属部门</label>
+							<input type="text" name="" id="name" value="" />
+						</div>
+						<div class="user-group">
+							<label for="name">联系电话</label>
+							<input type="text" name="" id="name" value="" />
+						</div>
+						<div class="user-group">
+							<label for="name">Email</label>
+							<input type="text" name="" id="name" value="" />
+						</div>
+						<div class="user-group">
+							<label for="name">权限管理上限</label>
+							<input type="text" name="" id="name" value="" />
+						</div>
+						<div class="user-title" style="margin-top: 20px;">
+							系统登录
+						</div>
+						<div class="user-group">
+							<label for="name">用户名</label>
+							<input type="text" name="" id="name" value="" />
+							<div class="change dbtn">
+								更改
+							</div>
+						</div>
+						<div class="user-group">
+							<label for="name">密码</label>
+							<input type="text" name="" id="name" value="" />
+							<div class="change dbtn">
+								更改
+							</div>
+						</div>
+						<div class="user-group sub">
+							<input type="submit" name="" id="" value="提交" class="dbtn"/>
+							<input type="reset" name="" id="" value="返回" class="dbtn"/>
+						</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
